@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div>
         <Navbar/>
-      <h1>Contact us</h1>
+      <h1>contact us</h1>
     </div>
   )
 }
