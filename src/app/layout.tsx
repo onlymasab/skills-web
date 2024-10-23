@@ -171,9 +171,9 @@ const gtwalsheimpro = localfont({
 })
 
 export const metadata: Metadata = {
-  title: "Online classNamees for Creatives | Skiills - Paandaaa",
+  title: "Online Classes for Creatives | Skiills - Paandaaa",
   description: "Skiills by Paandaaa offers high-quality online courses designed by expert educators, empowering students with practical knowledge and skills for personal and professional growth.",
-  keywords: "learn, learning, className, classNamees, teach, education, how to, online learning, collaborative learning"
+  keywords: "learn, learning, classes, classes, teach, education, how to, online learning, collaborative learning"
 }
 
 export default function RootLayout({

@@ -11,4 +11,22 @@
 
 
 
+/* Custom CSS for .jss65 */
+.jss65 h3 span::after {
+    height: 5px;
+    content: ''; /* Ensure the pseudo-element is generated */
+    display: block; /* Ensures it takes up space */
+}
 
+/* Custom CSS for .jss89 */
+.jss89 h3 span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position below the text */
+    width: 100%; /* Full width */
+    height: 3px; /* Height of the line */
+    border-radius: 2px; /* Rounded corners */
+    background-color: #00FF84; /* Green color */
+}
