@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Navbar from "@/app/components/navbar"
 import localfont from "next/font/local"
 import "./theme/styles/globals.css";
+import { Inter } from 'next/font/google'
+ 
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({ subsets: ['latin'] })
 
 const gtwalsheimpro = localfont({
  variable:  '--font-gtwlsheimpro',
@@ -184,8 +188,8 @@ export default function RootLayout({
   return (
     <html lang="en">
      
-      <body className={gtwalsheimpro.variable}>
-              <Navbar />
+      <body className={`${gtwalsheimpro.variable} ${inter.className}`}>
+              {/* <Navbar /> */}
               {children}
         </body>
     </html>

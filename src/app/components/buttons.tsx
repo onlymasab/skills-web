@@ -9,6 +9,8 @@ interface ButtonProps {
   onClick?: () => void;  // Click handler function
   disabled?: boolean;  // Disabled state
   className?: string;  // Additional classes for custom styling
+  bgColor?: string; // Custom background color
+  textColor?: string; // Custom text color
   [key: string]: any;  // Other props for customizability
 }
 
@@ -21,6 +23,8 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   disabled = false,
   className = '',
+  bgColor,
+  textColor,
   ...props
 }) => {
   // Style mappings for different variants
@@ -33,23 +37,26 @@ const Button: React.FC<ButtonProps> = ({
   // Style mappings for different sizes
   const sizeStyles = {
     sm: 'px-3 py-1 text-sm',
-    md: 'px-4 py-2 text-base',
+    md: 'px-2.5 py-1 text-base',
     lg: 'px-6 py-3 text-lg',
   };
 
-  // Determine the background fill
-  const fillStyle = fill === 'solid' ? 'bg-blue-500 text-white' : 'bg-transparent';
+  // Determine the background fill and color styles
+  const fillStyle = fill === 'solid' ? 'bg-white text-black' : 'bg-transparent';
+  const customBgColor = bgColor ? `bg-${bgColor}` : variantStyles[variant].split(' ')[0];
+  const customTextColor = textColor ? `text-${textColor}` : variantStyles[variant].split(' ')[1];
 
   return (
     <button
       onClick={onClick}
       disabled={disabled}
       className={`
-        ${variantStyles[variant]} 
+        ${customBgColor} 
+        ${customTextColor} 
         ${sizeStyles[size]} 
         ${fillStyle}
         ${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-opacity-90'}
-        flex items-center justify-center rounded-md font-bold leading-6 transition duration-200 ease-in-out 
+        flex items-center justify-center rounded-md font-semibold leading-6 transition duration-200 ease-in-out 
         ${className}
       `}
       {...props}
