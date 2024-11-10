@@ -12,12 +12,12 @@ export default function Navbar() {
   
 
   return (
-    <header className='w-full fixed max-h-[70px] font-sans'>
-      <nav className='w-full h-full'>
-        <div className='flex items-center justify-between pr-5'>
+    <header className='w-full fixed min-h-[70px] flex items-center justify-center font-sans '>
+      <nav className='w-full h-full max-w-screen-ll'>
+        <div className='flex items-center pr-5 ll:px-5 justify-between'>
 
           {/* Left Nav Items */}
-          <div className='flex lp:hidden'>
+          <div className='flex ll:hidden'>
               <svg id="svgElement" onClick={handleClick} className="cursor-pointer  transition-transform duration-300" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" >
                 
                   {/* First line (horizontal) */}
@@ -29,7 +29,7 @@ export default function Navbar() {
           </div>
 
             {/* Center Nav Items */}
-          <div className='flex items-center align-middle'>
+          <div className='flex flex-1 items-center align-middle tb:ml-0'>
             {/* Logo */}
             <div className=""> 
 
@@ -71,33 +71,47 @@ export default function Navbar() {
           </div>
 
 
-          {/* Desktop View Item Browse and search */}
-          <div className="flex-1 hidden lp:flex lp:px-8 lp:items-center font-semibold text-[14px]">
-            {/* Browse Dropdown */}
-            <div className="flex items-center align-middle mr-4 font-bold hover:text-[#3722d3] transition-colors cursor-pointer">
-              <span className="mr-2">Browse</span>
-              <svg aria-hidden="true" height="10" role="button" viewBox="0 0 18 10" width="10"><path d="M9.71533 9.68522C9.70988 9.69105 9.70437 9.69681 9.69879 9.70251C9.30372 10.1058 8.6706 10.0981 8.28467 9.68522L0.159216 0.992738C-0.0530721 0.765635 -0.0530721 0.397429 0.159216 0.170327C0.371504 -0.0567756 0.715692 -0.0567756 0.92798 0.170327L9 8.80564L17.072 0.170327C17.2843 -0.0567756 17.6285 -0.0567756 17.8408 0.170327C18.0531 0.397429 18.0531 0.765635 17.8408 0.992738L9.71533 9.68522Z"></path></svg>
+          {/* Laptop L View Item Browse and Dropdown */}
+          <div className="flex-1 hidden ll:flex lp:px-8 lp:items-center font-semibold text-[14px]">
+           
+            {/* Catalog Dropdown */}
+            <div className="flex group items-center text-white/60 align-middle mr-4 font-bold hover:text-white hover:bg-white/10 px-2 rounded-md py-1 transition-colors cursor-pointer">
+              <span className="mr-2 ">Catalog</span>
+              <svg className="stroke-white/60 group-hover:stroke-white group-hover:rotate-180 transition-transform duration-300" aria-hidden="true" height="10"  role="button" viewBox="0 0 18 10" width="10"><path d="M9.71533 9.68522C9.70988 9.69105 9.70437 9.69681 9.69879 9.70251C9.30372 10.1058 8.6706 10.0981 8.28467 9.68522L0.159216 0.992738C-0.0530721 0.765635 -0.0530721 0.397429 0.159216 0.170327C0.371504 -0.0567756 0.715692 -0.0567756 0.92798 0.170327L9 8.80564L17.072 0.170327C17.2843 -0.0567756 17.6285 -0.0567756 17.8408 0.170327C18.0531 0.397429 18.0531 0.765635 17.8408 0.992738L9.71533 9.68522Z"></path></svg>
             </div>
+
+            <div className="flex group items-center text-white/60 align-middle mr-4 font-bold hover:text-white hover:bg-white/10 px-2 rounded-md py-1 transition-colors cursor-pointer">
+              <span className="mr-2 ">Resources</span>
+              <svg className="stroke-white/60 group-hover:stroke-white group-hover:rotate-180 transition-transform duration-300" aria-hidden="true" height="10"  role="button" viewBox="0 0 18 10" width="10"><path d="M9.71533 9.68522C9.70988 9.69105 9.70437 9.69681 9.69879 9.70251C9.30372 10.1058 8.6706 10.0981 8.28467 9.68522L0.159216 0.992738C-0.0530721 0.765635 -0.0530721 0.397429 0.159216 0.170327C0.371504 -0.0567756 0.715692 -0.0567756 0.92798 0.170327L9 8.80564L17.072 0.170327C17.2843 -0.0567756 17.6285 -0.0567756 17.8408 0.170327C18.0531 0.397429 18.0531 0.765635 17.8408 0.992738L9.71533 9.68522Z"></path></svg>
+            </div>
+
+            <div className="flex group items-center text-white/60 align-middle mr-4 font-bold hover:text-white hover:bg-white/10 px-2 rounded-md py-1 transition-colors cursor-pointer">
+              <span className="mr-2 ">Community</span>
+              <svg className="stroke-white/60 group-hover:stroke-white group-hover:rotate-180 transition-transform duration-300" aria-hidden="true" height="10"  role="button" viewBox="0 0 18 10" width="10"><path d="M9.71533 9.68522C9.70988 9.69105 9.70437 9.69681 9.69879 9.70251C9.30372 10.1058 8.6706 10.0981 8.28467 9.68522L0.159216 0.992738C-0.0530721 0.765635 -0.0530721 0.397429 0.159216 0.170327C0.371504 -0.0567756 0.715692 -0.0567756 0.92798 0.170327L9 8.80564L17.072 0.170327C17.2843 -0.0567756 17.6285 -0.0567756 17.8408 0.170327C18.0531 0.397429 18.0531 0.765635 17.8408 0.992738L9.71533 9.68522Z"></path></svg>
+            </div>
+
             
-            <span className="mr-4">Learning Paths</span>
-            <div className="flex relative">
-            <svg className="absolute mt-1 ml-3" aria-hidden="true"  height="24" viewBox="0 0 24 24" width="24"><path d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm6-1.708l5.854 5.854a.5.5 0 0 1-.708.708l-5.854-5.855a8 8 0 1 1 .707-.707z"></path></svg>
-              <input className="border w-full border-solid border-[##DCDEE1] px-12 py-1 rounded-sm placeholder:text-[#000]" type="text" placeholder="Search for classes, skills, sessions" />
-              </div>
+            <span className="mr-4 text-white/60 hover:text-white hover:bg-white/10 px-2 rounded-md py-1 transition-colors cursor-pointer">Career Center</span>
+            <span className="mr-4 text-white/60 hover:text-white hover:bg-white/10 px-2 rounded-md py-1 transition-colors cursor-pointer">Learning Paths</span>
+    
           </div>
           </div>
             {/* Right Nav Items */}
-            <div className="flex align-middle text-center text-[14px] font-bold">
+            <div className="flex align-middle text-center font-bold">
+               
                 {/* Extra Widgets & Sign In */}
-                <div className=" hidden lg:flex align-middle text-center my-auto">
+                <div className="hidden tb:flex  align-middle">
+                 
                   {/* Langauge Icons */}
-                  <svg className="mr-4" width="24" height="24" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="intl_lang_sel_icon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"></path></svg>
-                  <span className="mr-4 uppercase bg-[#ff4500] text-[10px] items-baseline  font-bold text-white px-3 py-1 rounded-xl">Beta</span>
-                  <div className="mr-4 flex align-middle items-baseline">
-                    <span className="mr-2">Sessions</span>
-                    <svg aria-hidden="true" height="10" role="button" viewBox="0 0 18 10" width="10"><path d="M9.71533 9.68522C9.70988 9.69105 9.70437 9.69681 9.69879 9.70251C9.30372 10.1058 8.6706 10.0981 8.28467 9.68522L0.159216 0.992738C-0.0530721 0.765635 -0.0530721 0.397429 0.159216 0.170327C0.371504 -0.0567756 0.715692 -0.0567756 0.92798 0.170327L9 8.80564L17.072 0.170327C17.2843 -0.0567756 17.6285 -0.0567756 17.8408 0.170327C18.0531 0.397429 18.0531 0.765635 17.8408 0.992738L9.71533 9.68522Z"></path></svg>
+                  <svg className="mr-4 my-auto fill-white/60 hover:fill-white cursor-pointer"  width="24" height="24" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="intl_lang_sel_icon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"></path></svg>
+                 
+                  <span className="mr-3 h-6 w-10 my-auto uppercase bg-white text-[9px] flex justify-center items-center align-text-bottom text-pretty   font-bold text-black  rounded-full">Beta</span>
+                 
+                  <div className="flex group items-center text-white/60 align-middle mr-4 font-bold hover:text-white hover:bg-white/10 px-2 rounded-md py-1 transition-colors cursor-pointer">
+                    <span className="mr-2 ">Sessions</span>
+                    <svg className="stroke-white/60 group-hover:stroke-white group-hover:rotate-180 transition-transform duration-300" aria-hidden="true" height="10"  role="button" viewBox="0 0 18 10" width="10"><path d="M9.71533 9.68522C9.70988 9.69105 9.70437 9.69681 9.69879 9.70251C9.30372 10.1058 8.6706 10.0981 8.28467 9.68522L0.159216 0.992738C-0.0530721 0.765635 -0.0530721 0.397429 0.159216 0.170327C0.371504 -0.0567756 0.715692 -0.0567756 0.92798 0.170327L9 8.80564L17.072 0.170327C17.2843 -0.0567756 17.6285 -0.0567756 17.8408 0.170327C18.0531 0.397429 18.0531 0.765635 17.8408 0.992738L9.71533 9.68522Z"></path></svg>
                   </div>
-                  <span className="mr-4">Sign In</span>
+                  <span className="mr-4 text-white/60 hover:text-white hover:bg-white/10 px-2 rounded-md py-1 transition-colors cursor-pointer">Sign In</span>
                 </div>
                 <Button children={"Sign Up"} fill="solid" bgColor="white" textColor="balck" size="md"  />
             </div>

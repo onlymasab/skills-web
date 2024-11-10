@@ -189,7 +189,7 @@ export default function RootLayout({
     <html lang="en">
      
       <body className={`${gtwalsheimpro.variable} ${inter.className}`}>
-              {/* <Navbar /> */}
+              <Navbar />
               {children}
         </body>
     </html>
