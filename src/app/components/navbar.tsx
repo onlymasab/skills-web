@@ -12,7 +12,7 @@ export default function Navbar() {
   
 
   return (
-    <header className='w-full fixed min-h-[70px] flex items-center justify-center font-sans '>
+    <header className='w-full fixed min-h-[70px] flex items-center justify-center font-sans bg-black'>
       <nav className='w-full h-full max-w-screen-ll'>
         <div className='flex items-center pr-5 ll:px-5 justify-between'>
 

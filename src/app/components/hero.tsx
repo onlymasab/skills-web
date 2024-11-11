@@ -7,8 +7,8 @@ import Button from "./buttons";
 function Hero() {
   return (
    
-    <section className="bg-black h-auto max-w-screen-ll">
-      <div className="pt-24 pb-8 px-5 tb:flex tb:gap-8">
+    <section className="bg-black h-auto tb:h-svh">
+      <div className="pt-24 pb-8 px-5 lp:px-10  tb:flex tb:gap-8 max-w-screen-ll mx-auto justify-between">
       {/* Right Side Hero */}
         <div>
               {/* Banner top higlight */}
@@ -28,8 +28,8 @@ function Hero() {
 
               {/* Hero Text */}
               <div className="text-white mb-8">
-                <h1 className="text-[32px] mm:text-[42px] mb-3 font-medium leading-tight tracking-tighter">The next Generation of Learning Platform.</h1>
-                <p className="text-white/60 text-balance text-base leading-5 tracking-tight">Professional Cerfitificates offer flexible, online training designed to support your career growth.</p>
+                <h1 className="text-[32px] mm:text-[42px] lp:text-[68px] ll:text-[88px] mb-3 font-medium leading-tight tracking-tighter max-w-[800px]">The next Generation of Learning Platform.</h1>
+                <p className="text-white/60 w-full  text-balance text-base leading-5 font-normal max-w-[400px]">Professional Cerfitificates offer flexible, online training designed to support your career growth.</p>
               </div>
 
               {/* Hero Button */}
@@ -47,8 +47,8 @@ function Hero() {
               </div>
         </div>
         {/* Social Button Card */}
-        <div className="mt-8 tb:max-w-[356px] tb:bg-white/10 tb:px-8 tb:py-8 rounded-3xl tb:border tb:border-white/30 tb:mt-auto">
-            <h3 className="text-white text-center mb-4">Get 7 free days Online Session </h3>
+        <div className="mt-8 tb:max-w-[356px] tb:bg-white/10 tb:px-5 tb:py-8 rounded-3xl tb:border tb:border-white/30 tb:mt-auto">
+            <h3 className="text-white text-center mb-4">Get 7 free days online session </h3>
            <button className="cursor-pointer mb-3 flex items-center justify-start w-full px-8 py-2 text-white border border-gray-300 rounded-md ">
              <svg className="flex mr-4" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_134_33)">
                   <path fillRule="evenodd" clipRule="evenodd" d="M17.64 9.20442C17.64 8.56624 17.5827 7.95262 17.4764 7.36353H9V10.8449H13.8436C13.635 11.9699 13.0009 12.9231 12.0477 13.5613V15.8194H14.9564C16.6582 14.2526 17.64 11.9453 17.64 9.20442Z" fill="#4285F4"/>
@@ -80,7 +80,7 @@ function Hero() {
               Continue with Email
             </button>
 
-            <p className="leading-[15px] text-white/60 text-center text-xs text-pretty">By signing up you agree to Skiills <span className="font-medium text-white">Terms of 
+            <p className="leading-[15px] text-white/60 text-center text-xs tb:text-[8px] text-pretty">By signing up you agree to Skiills <span className="font-medium text-white">Terms of 
           Service</span> and <span className="text-white font-medium">Privacy Policy</span>, and agree to receive marketing communications from skiills at the email address provided. This page is protected by reCAPTCHA and is subject to Google’s <span className="text-white font-medium"> Terms of Service </span> and <span className="text-white font-medium">Privacy Policy </span> .</p>
       
         </div>
